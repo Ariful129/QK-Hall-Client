@@ -10,7 +10,7 @@ const AllotementDetails = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/roomallotement`;
+    const url = `https://qk-hall-server.vercel.app/roomallotement`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -46,7 +46,7 @@ const AllotementDetails = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result)=>{
             if(result.isConfirmed){
-                fetch(`http://localhost:5000/roomallotement/${id}`, {
+                fetch(`https://qk-hall-server.vercel.app/roomallotement/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

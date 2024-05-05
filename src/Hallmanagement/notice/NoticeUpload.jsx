@@ -17,7 +17,7 @@ const NoticeUpload = () => {
   // }, []);
   // const getPdf = async () => {
   //   try {
-  //     const result = await axios.get("http://localhost:5000/get-pdf");
+  //     const result = await axios.get("https://qk-hall-server.vercel.app/get-pdf");
   //     console.log(result.data);
   //     setAllImage(result.data);
   //   } catch (error) {
@@ -44,7 +44,7 @@ const NoticeUpload = () => {
     formData.append("date", date);
 
     try {
-      const response = await axios.post("http://localhost:5000/upload-pdf", formData, {
+      const response = await axios.post("https://qk-hall-server.vercel.app/upload-pdf", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -66,7 +66,7 @@ const NoticeUpload = () => {
 
   // const showPdf = (pdf) => {
   //   console.log(pdf)
-  //   window.open(`http://localhost:5000/pdf/${pdf}`, "_blank", "noreferrer");
+  //   window.open(`https://qk-hall-server.vercel.app/pdf/${pdf}`, "_blank", "noreferrer");
   // };
 
 

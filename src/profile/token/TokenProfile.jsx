@@ -5,7 +5,7 @@ const TokenProfile = ({ token }) => {
    
 
     const showPdf = () => {
-        window.open("http://localhost:5000/pdf/1714851295984token.pdf", "_blank");
+        window.open("https://qk-hall-server.vercel.app/pdf/1714851295984token.pdf", "_blank");
     };
     
 

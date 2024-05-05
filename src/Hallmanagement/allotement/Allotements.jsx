@@ -11,7 +11,7 @@ const Allotements = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/roomallotement`;
+    const url = `https://qk-hall-server.vercel.app/roomallotement`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const Allotements = () => {
     };
 
     const handleBookingConfirm = (id, SelectedRoom) => {
-        fetch(`http://localhost:5000/roomallotement/${id}`, {
+        fetch(`https://qk-hall-server.vercel.app/roomallotement/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

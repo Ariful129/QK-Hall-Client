@@ -99,7 +99,7 @@ const SignUp = () => {
     };
 
     const hitAPI = (userData) => {
-        fetch('http://localhost:5000/users', {
+        fetch('https://qk-hall-server.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

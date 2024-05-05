@@ -50,7 +50,7 @@ const TokenPueches = () => {
         }
         console.log(TokenApplication)
 
-        fetch('http://localhost:5000/tokenpurches', {
+        fetch('https://qk-hall-server.vercel.app/tokenpurches', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

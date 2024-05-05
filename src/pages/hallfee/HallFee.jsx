@@ -52,7 +52,7 @@ const HallFee = () => {
         }
         console.log(HallFee)
 
-        fetch('http://localhost:5000/hallfee', {
+        fetch('https://qk-hall-server.vercel.app/hallfee', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

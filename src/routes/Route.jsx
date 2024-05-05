@@ -54,27 +54,27 @@ const router = createBrowserRouter([
       {
         path: '/token_purches',
         element: <PrivateRoute><TokenPueches></TokenPueches></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://qk-hall-server.vercel.app/users')
       },
       // {
       //   path: '/profile',
       //   element: <PrivateRoute><Profile></Profile></PrivateRoute>,
-      //   loader: () => fetch('http://localhost:5000/users')
+      //   loader: () => fetch('https://qk-hall-server.vercel.app/users')
       // },
       {
         path: '/hallfee',
         element: <PrivateRoute><HallFee></HallFee></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://qk-hall-server.vercel.app/users')
       },
       {
         path: '/complain',
         element: <PrivateRoute><Complain></Complain></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://qk-hall-server.vercel.app/users')
       },
       {
         path: '/roomallotement',
         element: <PrivateRoute><RoomAllotement></RoomAllotement></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://qk-hall-server.vercel.app/users')
       },
       //for Profile
       {
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
           {
             path: 'myprofile',
             element: <MyProfile></MyProfile>,
-            // loader: () => fetch('http://localhost:5000/users')
+            // loader: () => fetch('https://qk-hall-server.vercel.app/users')
           },
           {
             path: 'hallfeeprofile',

@@ -40,7 +40,7 @@ const Complain = () => {
         }
         console.log(Complains)
 
-        fetch('http://localhost:5000/complains', {
+        fetch('https://qk-hall-server.vercel.app/complains', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

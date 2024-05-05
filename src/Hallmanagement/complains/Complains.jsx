@@ -9,7 +9,7 @@ const Complains = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/complains`;
+    const url = `https://qk-hall-server.vercel.app/complains`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -26,7 +26,7 @@ const Complains = () => {
     const handleDelete = id => {
         const proceed = confirm('Are You sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/complains/${id}`, {
+            fetch(`https://qk-hall-server.vercel.app/complains/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

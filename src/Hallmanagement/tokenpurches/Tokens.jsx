@@ -11,7 +11,7 @@ const Tokens = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/tokenpurches`;
+    const url = `https://qk-hall-server.vercel.app/tokenpurches`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -33,7 +33,7 @@ const Tokens = () => {
     };
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/tokenpurches/${id}`, {
+        fetch(`https://qk-hall-server.vercel.app/tokenpurches/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -69,7 +69,7 @@ const Tokens = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result)=>{
             if(result.isConfirmed){
-                fetch(`http://localhost:5000/tokenpurches/${id}`, {
+                fetch(`https://qk-hall-server.vercel.app/tokenpurches/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

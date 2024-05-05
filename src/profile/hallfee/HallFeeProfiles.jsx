@@ -8,7 +8,7 @@ const HallFeeProfiles = () => {
     const [allstudents, setAllstudents] = useState([]);
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/hallfee?email=${user?.email}`;
+    const url = `https://qk-hall-server.vercel.app/hallfee?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

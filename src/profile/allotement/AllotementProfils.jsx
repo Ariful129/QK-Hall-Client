@@ -10,7 +10,7 @@ const AllotementProfils = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/roomallotement?email=${user?.email}`;
+    const url = `https://qk-hall-server.vercel.app/roomallotement?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

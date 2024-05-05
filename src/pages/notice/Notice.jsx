@@ -10,7 +10,7 @@ const Notice = () => {
 
   const getPdf = async () => {
     try {
-      const result = await axios.get("http://localhost:5000/get-pdf");
+      const result = await axios.get("https://qk-hall-server.vercel.app/get-pdf");
       console.log(result.data);
       setAllImage(result.data);
     } catch (error) {
@@ -20,7 +20,7 @@ const Notice = () => {
 
   const showPdf = (pdf) => {
     console.log(pdf);
-    window.open(`http://localhost:5000/pdf/${pdf}`, "_blank", "noreferrer");
+    window.open(`https://qk-hall-server.vercel.app/pdf/${pdf}`, "_blank", "noreferrer");
   };
 
   return (

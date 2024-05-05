@@ -6,7 +6,7 @@ const Students = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredStudents, setFilteredStudents] = useState([]);
 
-    const url = `http://localhost:5000/users`;
+    const url = `https://qk-hall-server.vercel.app/users`;
 
     useEffect(() => {
         fetch(url)

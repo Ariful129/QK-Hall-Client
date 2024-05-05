@@ -62,7 +62,7 @@ const RoomAllotement = () => {
         }
         console.log(RoomApplication)
 
-        fetch('http://localhost:5000/roomallotement', {
+        fetch('https://qk-hall-server.vercel.app/roomallotement', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

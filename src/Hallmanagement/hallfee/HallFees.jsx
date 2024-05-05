@@ -11,7 +11,7 @@ const HallFees = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/hallfee`;
+    const url = `https://qk-hall-server.vercel.app/hallfee`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -34,7 +34,7 @@ const HallFees = () => {
     };
 
     const handleBookingConfirm = id => {
-        fetch(`http://localhost:5000/hallfee/${id}`, {
+        fetch(`https://qk-hall-server.vercel.app/hallfee/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

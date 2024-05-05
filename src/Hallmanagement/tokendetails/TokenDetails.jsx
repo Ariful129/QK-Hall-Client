@@ -11,7 +11,7 @@ const TokenDetails = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/tokenpurches`;
+    const url = `https://qk-hall-server.vercel.app/tokenpurches`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

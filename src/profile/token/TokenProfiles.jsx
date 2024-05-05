@@ -11,7 +11,7 @@ const TokenProfiles = () => {
     // const auth = UseAuth();
     // const { user } = auth;
 
-    const url = `http://localhost:5000/tokenpurches?email=${user?.email}`;
+    const url = `https://qk-hall-server.vercel.app/tokenpurches?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -27,7 +27,7 @@ const TokenProfiles = () => {
 
     // const showPdf = () => {
     //     console.log('Arif8')
-    //     window.open(`http://localhost:5000/pdf/1714851295984token.pdf`, "_blank", "noreferrer");
+    //     window.open(`https://qk-hall-server.vercel.app/pdf/1714851295984token.pdf`, "_blank", "noreferrer");
     //   };
     
     return (
