@@ -24,6 +24,11 @@ const TokenProfiles = () => {
         // .then(res => setBookings(res.data))
 
     }, [url]);
+
+    // const showPdf = () => {
+    //     console.log('Arif8')
+    //     window.open(`http://localhost:5000/pdf/1714851295984token.pdf`, "_blank", "noreferrer");
+    //   };
     
     return (
         <div>
@@ -54,7 +59,7 @@ const TokenProfiles = () => {
 
                                 key={token._id}
                                 token={token}
-                                //handleDelete={handleDelete}
+                                //showPdf={showPdf}
                                 index={index + 1}
                             ></TokenProfile>)
 
