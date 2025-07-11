@@ -51,7 +51,7 @@ A comprehensive hall management system built with the MERN stack (MongoDB, Expre
 
 **Deployment:**
 - Firebase Hosting (Frontend)
-- Backend deployment platform (specify your platform)
+- Backend deployment platform (versel)
 
 ## 📦 Prerequisites
 
