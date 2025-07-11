@@ -1,86 +1,208 @@
-# QK-Hall-Client
+# QK Hall Management System
 
-A modern React-based hall management system with beautiful UI components and responsive design.
+A comprehensive hall management system built with the MERN stack (MongoDB, Express.js, React.js, Node.js) for efficient management of residential halls, student accommodations, and facility operations.
 
-## Live Demo
-**[View Live Application](https://qk-hall.web.app/)**
+## 🚀 Live Demo
 
-## Features
-- 🏢 Hall management system with React components
-- 📱 Responsive design with Tailwind CSS
-- 🎨 Modern UI components using DaisyUI
-- ⚡ Fast performance with Vite bundling
-- 🔄 Dynamic routing with React Router
-- 📊 Interactive dashboard and forms
+**Frontend:** [https://qk-hall.web.app/](https://qk-hall.web.app/)
 
-## Tech Stack
-- **Frontend:** React.js, JavaScript (ES6+)
-- **Styling:** Tailwind CSS, DaisyUI
-- **State Management:** React Hooks (useState, useEffect)
-- **Routing:** React Router DOM
-- **Build Tool:** Vite
-- **Deployment:** Firebase Hosting
+## 📋 Table of Contents
 
-## Installation
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-# Clone repository
-git clone https://github.com/Ariful129/QK-Hall-Client.git
-cd QK-Hall-Client
+## ✨ Features
 
-# Install dependencies
-npm install
+- **Student Management**: Registration, profile management, and room assignments
+- **Room Management**: Room allocation, availability tracking, and maintenance records
+- **Facility Management**: Common area bookings, facility maintenance, and usage tracking
+- **Fee Management**: Payment tracking, fee collection, and financial reporting
+- **Admin Dashboard**: Comprehensive administrative controls and analytics
+- **Real-time Notifications**: Instant updates for important announcements
+- **Responsive Design**: Mobile-friendly interface for all devices
+- **Secure Authentication**: JWT-based authentication system
 
-# Start development server
-npm run dev
+## 🛠️ Tech Stack
+
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose ODM
+- JWT Authentication
+- bcrypt for password hashing
+
+**Frontend:**
+- React.js
+- Firebase (Hosting)
+- HTML5 & CSS3
+- JavaScript (ES6+)
+
+**Database:**
+- MongoDB Atlas
+
+**Deployment:**
+- Firebase Hosting (Frontend)
+- Backend deployment platform (specify your platform)
+
+## 📦 Prerequisites
+
+Before running this project, make sure you have the following installed:
+
+- Node.js
+- npm or yarn package manager
+- MongoDB (local installation or MongoDB Atlas account)
+- Git
+
+## 🔧 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Ariful129/QK-Hall-Server.git
+   cd QK-Hall-Server
+   ```
+
+2. **Install backend dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Install frontend dependencies** (if frontend is in the same repo)
+   ```bash
+   cd client
+   npm install
+   cd ..
+   ```
+
+4. **Set up environment variables**
+   
+   Create a `.env` file in the root directory and add:
+   ```env
+   PORT=5000
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+   NODE_ENV=development
+   ```
+
+5. **Start the development servers**
+   
+   For backend:
+   ```bash
+   npm start
+   # or for development with nodemon
+   npm run dev
+   ```
+
+   For frontend (if separate):
+   ```bash
+   cd client
+   npm start
+   ```
+
+## 🌐 Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```env
+# Server Configuration
+PORT=5000
+NODE_ENV=development
+
+# Database
+MONGODB_URI=mongodb+srv://your-username:your-password@cluster.mongodb.net/qk-hall
+
+# JWT
+JWT_SECRET=your-super-secret-jwt-key
+JWT_EXPIRE=30d
+
+# Firebase Configuration (if using Firebase for additional services)
+FIREBASE_API_KEY=your-firebase-api-key
+FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+FIREBASE_PROJECT_ID=your-project-id
 ```
 
-## Scripts
+## 🎯 Usage
 
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run preview  # Preview production build
+1. **Access the application**
+   - Frontend: [https://qk-hall.web.app/](https://qk-hall.web.app/)
+   - Backend API: `http://localhost:5000` (local development)
+
+2. **Admin Access**
+   - Register as an admin or use seeded admin credentials
+   - Access the admin dashboard to manage halls, rooms, and students
+
+3. **Student Access**
+   - Students can register and log in to view their room assignments
+   - Access facility booking and payment information
+
+## 📡 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - User login
+- `GET /api/auth/profile` - Get user profile
+
+### Hall Management
+- `GET /api/halls` - Get all halls
+- `POST /api/halls` - Create new hall
+- `PUT /api/halls/:id` - Update hall information
+- `DELETE /api/halls/:id` - Delete hall
+
+### Room Management
+- `GET /api/rooms` - Get all rooms
+- `POST /api/rooms` - Create new room
+- `PUT /api/rooms/:id` - Update room information
+- `DELETE /api/rooms/:id` - Delete room
+
+### Student Management
+- `GET /api/students` - Get all students
+- `POST /api/students` - Add new student
+- `PUT /api/students/:id` - Update student information
+- `DELETE /api/students/:id` - Remove student
+
+## 📁 Project Structure
+
+```
+QK-Hall-Server/
+├── node_modules/
+├── pdf/                    # PDF documents and reports
+├── index.js               # Main server file
+├── package.json           # Backend dependencies
+├── package-lock.json      # Lock file for dependencies
+├── vercel.json           # Vercel deployment configuration
+├── .gitignore            # Git ignore file
+└── README.md             # This file
 ```
 
-## Project Structure
+## 🤝 Contributing
 
-```
-QK-Hall-Client/
-├── public/           # Static assets
-├── src/             
-│   ├── components/   # React components
-│   ├── pages/        # Page components
-│   ├── hooks/        # Custom React hooks
-│   ├── utils/        # Utility functions
-│   ├── styles/       # CSS files
-│   ├── App.jsx       # Main App component
-│   └── main.jsx      # Entry point
-├── .firebase/        # Firebase configuration
-├── .firebaserc       # Firebase project config
-├── firebase.json     # Firebase hosting config
-├── package.json      # Dependencies
-├── tailwind.config.js # Tailwind configuration
-└── vite.config.js    # Vite configuration
-```
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## Deployment
+## 📝 License
 
-This project is deployed on Firebase Hosting with automatic deployments.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```bash
-# Build the project
-npm run build
+## 👨‍💻 Author
 
-# Deploy to Firebase
-firebase deploy
-```
+**Ariful Islam**
+- GitHub: [@Ariful129](https://github.com/Ariful129)
+- Email: [your-email@example.com](mailto:your-email@example.com)
 
-## Contact
 
-- **Live Demo:** [qk-hall.web.app](https://qk-hall.web.app/)
-- **GitHub:** [github.com/Ariful129](https://github.com/Ariful129)
+
 
 ---
 
-⭐ **Star this repo if you found it helpful!**
+⭐ Star this repository if you find it helpful!
